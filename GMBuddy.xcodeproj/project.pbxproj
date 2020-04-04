@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		E67148D6241E6735007C8AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148D5241E6735007C8AE7 /* AppDelegate.swift */; };
-		E67148D8241E6735007C8AE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148D7241E6735007C8AE7 /* ViewController.swift */; };
 		E67148DA241E6736007C8AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67148D9241E6736007C8AE7 /* Assets.xcassets */; };
 		E67148DD241E6736007C8AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67148DB241E6736007C8AE7 /* Main.storyboard */; };
 		E67148E6241E8EBB007C8AE7 /* ContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148E5241E8EBB007C8AE7 /* ContentController.swift */; };
 		E67148E8241E8F32007C8AE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148E7241E8F32007C8AE7 /* ContentView.swift */; };
 		E67148EB241E918C007C8AE7 /* NSPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148EA241E918C007C8AE7 /* NSPopover.swift */; };
+		E67148EE241EBBF4007C8AE7 /* GitmojiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148ED241EBBF4007C8AE7 /* GitmojiController.swift */; };
+		E67148F1241EBD0B007C8AE7 /* Gitmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148F0241EBD0B007C8AE7 /* Gitmoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E67148D2241E6735007C8AE7 /* GMBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67148D5241E6735007C8AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E67148D7241E6735007C8AE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E67148D9241E6736007C8AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E67148DC241E6736007C8AE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E67148DE241E6736007C8AE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -27,6 +27,8 @@
 		E67148E5241E8EBB007C8AE7 /* ContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentController.swift; sourceTree = "<group>"; };
 		E67148E7241E8F32007C8AE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E67148EA241E918C007C8AE7 /* NSPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPopover.swift; sourceTree = "<group>"; };
+		E67148ED241EBBF4007C8AE7 /* GitmojiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitmojiController.swift; sourceTree = "<group>"; };
+		E67148F0241EBD0B007C8AE7 /* Gitmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gitmoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +61,10 @@
 		E67148D4241E6735007C8AE7 /* GMBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				E67148EF241EBD01007C8AE7 /* Model */,
+				E67148EC241EBBDB007C8AE7 /* Controller */,
 				E67148E9241E917F007C8AE7 /* Extensions */,
 				E67148D5241E6735007C8AE7 /* AppDelegate.swift */,
-				E67148D7241E6735007C8AE7 /* ViewController.swift */,
 				E67148D9241E6736007C8AE7 /* Assets.xcassets */,
 				E67148DB241E6736007C8AE7 /* Main.storyboard */,
 				E67148DE241E6736007C8AE7 /* Info.plist */,
@@ -78,6 +81,22 @@
 				E67148EA241E918C007C8AE7 /* NSPopover.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E67148EC241EBBDB007C8AE7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E67148ED241EBBF4007C8AE7 /* GitmojiController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E67148EF241EBD01007C8AE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E67148F0241EBD0B007C8AE7 /* Gitmoji.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,11 +169,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E67148D8241E6735007C8AE7 /* ViewController.swift in Sources */,
 				E67148E6241E8EBB007C8AE7 /* ContentController.swift in Sources */,
+				E67148EE241EBBF4007C8AE7 /* GitmojiController.swift in Sources */,
 				E67148E8241E8F32007C8AE7 /* ContentView.swift in Sources */,
 				E67148D6241E6735007C8AE7 /* AppDelegate.swift in Sources */,
 				E67148EB241E918C007C8AE7 /* NSPopover.swift in Sources */,
+				E67148F1241EBD0B007C8AE7 /* Gitmoji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

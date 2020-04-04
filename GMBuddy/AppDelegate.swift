@@ -12,13 +12,14 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 	private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-	private let contentController = ContentController()
+	private let gitmojiController = GitmojiController()
 	private let popover = NSPopover()
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
 		initStatusButton()
 		initPopover()
+		gitmojiController.load()
 	}
 	
 	func applicationWillTerminate(_ aNotification: Notification) {
@@ -33,6 +34,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 	
 	private func initPopover() {
+		let contentController = ContentController(gitmojiController: gitmojiController)
 		popover.contentViewController = contentController
 	}
 	
