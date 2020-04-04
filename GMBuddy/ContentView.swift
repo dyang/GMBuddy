@@ -34,11 +34,9 @@ struct ItemView: View {
 				.frame(minWidth: 60, alignment: .leading)
 			Spacer()
 		}
-		.gesture(TapGesture()
-		.onEnded{ _ in
-			print("--> \(self.gitmoji.code)")
-		})
-		
+		.onTapGesture {
+			PasteboardUtil.paste(self.gitmoji.code)
+		}
 	}
 }
 

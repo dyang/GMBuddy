@@ -15,6 +15,7 @@
 		E67148EB241E918C007C8AE7 /* NSPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148EA241E918C007C8AE7 /* NSPopover.swift */; };
 		E67148EE241EBBF4007C8AE7 /* GitmojiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148ED241EBBF4007C8AE7 /* GitmojiController.swift */; };
 		E67148F1241EBD0B007C8AE7 /* Gitmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148F0241EBD0B007C8AE7 /* Gitmoji.swift */; };
+		E6C838C624392474009C100A /* PasteboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C838C524392474009C100A /* PasteboardUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		E67148EA241E918C007C8AE7 /* NSPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPopover.swift; sourceTree = "<group>"; };
 		E67148ED241EBBF4007C8AE7 /* GitmojiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitmojiController.swift; sourceTree = "<group>"; };
 		E67148F0241EBD0B007C8AE7 /* Gitmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gitmoji.swift; sourceTree = "<group>"; };
+		E6C838C524392474009C100A /* PasteboardUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		E67148D4241E6735007C8AE7 /* GMBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				E6C838C42439245C009C100A /* Utils */,
 				E67148EF241EBD01007C8AE7 /* Model */,
 				E67148EC241EBBDB007C8AE7 /* Controller */,
 				E67148E9241E917F007C8AE7 /* Extensions */,
@@ -97,6 +100,14 @@
 				E67148F0241EBD0B007C8AE7 /* Gitmoji.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E6C838C42439245C009C100A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E6C838C524392474009C100A /* PasteboardUtil.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 				E67148E8241E8F32007C8AE7 /* ContentView.swift in Sources */,
 				E67148D6241E6735007C8AE7 /* AppDelegate.swift in Sources */,
 				E67148EB241E918C007C8AE7 /* NSPopover.swift in Sources */,
+				E6C838C624392474009C100A /* PasteboardUtil.swift in Sources */,
 				E67148F1241EBD0B007C8AE7 /* Gitmoji.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
