@@ -25,21 +25,20 @@ struct ItemView: View {
 	var gitmoji: Gitmoji
 	
 	var body: some View {
-		GeometryReader { metrics in
-			HStack() {
-				Text(self.gitmoji.emoji)
-					.font(Font.system(size: 36))
-					.frame(width: metrics.size.width * 0.2)
-				
-				Text(self.gitmoji.description)
-					.font(Font.system(size: 14))
-					.frame(width: metrics.size.width * 0.6, alignment: .leading)
-				
-				Text(self.gitmoji.code)
-					.font(Font.system(size: 18))
-					.frame(width: metrics.size.width * 0.2)
-			}
+		HStack() {
+			Text(self.gitmoji.emoji)
+				.font(Font.system(size: 36))
+			
+			Text(self.gitmoji.code + " " + self.gitmoji.description)
+				.font(Font.system(size: 14))
+				.frame(minWidth: 60, alignment: .leading)
+			Spacer()
 		}
+		.gesture(TapGesture()
+		.onEnded{ _ in
+			print("--> \(self.gitmoji.code)")
+		})
+		
 	}
 }
 
