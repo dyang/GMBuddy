@@ -65,6 +65,7 @@
 		E67148D4241E6735007C8AE7 /* GMBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				E6DE6A01244224AF00F252B3 /* Views */,
 				E6C838C42439245C009C100A /* Utils */,
 				E67148EF241EBD01007C8AE7 /* Model */,
 				E67148EC241EBBDB007C8AE7 /* Controller */,
@@ -75,7 +76,6 @@
 				E67148DE241E6736007C8AE7 /* Info.plist */,
 				E67148DF241E6736007C8AE7 /* GMBuddy.entitlements */,
 				E67148E5241E8EBB007C8AE7 /* ContentController.swift */,
-				E67148E7241E8F32007C8AE7 /* ContentView.swift */,
 			);
 			path = GMBuddy;
 			sourceTree = "<group>";
@@ -111,6 +111,14 @@
 				E6C838C524392474009C100A /* PasteboardUtil.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E6DE6A01244224AF00F252B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E67148E7241E8F32007C8AE7 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
