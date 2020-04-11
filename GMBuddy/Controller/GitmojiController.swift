@@ -26,11 +26,13 @@ class GitmojiController: ObservableObject {
 		
 		searchCancellable = appState.$searchText
 			.debounce(for: 0.4, scheduler: searchQueue)
+			.map { [weak self] text -> [Gitmoji] in
+				self?.filter(text) ?? []
+			}
+			.receive(on: DispatchQueue.main)
 			.eraseToAnyPublisher()
 			.sink(receiveValue: { [weak self] value in
-				if let self = self {
-					self.gitmojis = self.filter(value)
-				}
+				self?.gitmojis = value
 			})
 	}
 	
