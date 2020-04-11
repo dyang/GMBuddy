@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		initStatusButton()
 		initPopover()
 		gitmojiController.load()
+		NotificationCenter.default.addObserver(self, selector: #selector(dismissPopover), name: .dismissPopover, object: nil)
 	}
 	
 	func applicationWillTerminate(_ aNotification: Notification) {
@@ -42,6 +43,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		if let button = statusItem.button {
 			popover.togglePopover(sender, view: button)
 		}
+	}
+	
+	@objc func dismissPopover() {
+		togglePopover(nil)
 	}
 }
 

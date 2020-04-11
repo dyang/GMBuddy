@@ -43,6 +43,7 @@ struct ItemView: View {
 	
 	func onEmojiTapped() {
 		PasteboardUtil.paste(self.gitmoji.code)
+		NotificationCenter.default.post(name: .dismissPopover, object: nil)
 	}
 }
 
