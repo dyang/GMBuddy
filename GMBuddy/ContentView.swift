@@ -13,11 +13,11 @@ struct ContentView: View {
 	var gitmojiController: GitmojiController
 	
 	var body: some View {
-		List(gitmojiController.gitmojis) { gitmoji in
+		List(self.gitmojiController.gitmojis) { gitmoji in
 			ItemView(gitmoji: gitmoji)
-				.frame(height: 40)
+				.frame(minHeight: 40)
 		}
-		.padding()
+		.padding(0)
 	}
 }
 
@@ -28,15 +28,21 @@ struct ItemView: View {
 		HStack() {
 			Text(self.gitmoji.emoji)
 				.font(Font.system(size: 36))
+				.frame(width: 50)
 			
 			Text(self.gitmoji.code + " " + self.gitmoji.description)
 				.font(Font.system(size: 14))
-				.frame(minWidth: 60, alignment: .leading)
+				.frame(alignment: .leading)
+			
 			Spacer()
 		}
 		.onTapGesture {
-			PasteboardUtil.paste(self.gitmoji.code)
+			self.onEmojiTapped()
 		}
+	}
+	
+	func onEmojiTapped() {
+		PasteboardUtil.paste(self.gitmoji.code)
 	}
 }
 
