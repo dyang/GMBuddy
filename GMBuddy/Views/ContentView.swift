@@ -9,15 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
-	
-	var gitmojiController: GitmojiController
-	@State var searchText: String = ""
+	@ObservedObject var appState: AppState
+	@ObservedObject var gitmojiController: GitmojiController
 	
 	var body: some View {
 		VStack {
-			SearchField($searchText)
+			SearchField(text: $appState.searchText)
 				.padding([.top, .leading, .trailing], 8)
-			List(self.gitmojiController.gitmojis) { gitmoji in
+			List(gitmojiController.gitmojis) { gitmoji in
 				ItemView(gitmoji: gitmoji)
 					.frame(minHeight: 40)
 			}
@@ -54,7 +53,9 @@ struct ItemView: View {
 
 
 struct ContentView_Previews: PreviewProvider {
+	static let state = AppState()
 	static var previews: some View {
-		ContentView(gitmojiController: GitmojiController())
+		ContentView(appState: state,
+					gitmojiController: GitmojiController(appState: state))
 	}
 }

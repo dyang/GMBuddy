@@ -12,13 +12,17 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
 	private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
-	private let gitmojiController = GitmojiController()
+	private let appState = AppState()
 	private let popover = NSPopover()
+	private lazy var gitmojiController: GitmojiController = {
+		return GitmojiController(appState: self.appState)
+	}()
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {
 		// Insert code here to initialize your application
 		initStatusButton()
 		initPopover()
+		
 		gitmojiController.load()
 		NotificationCenter.default.addObserver(self, selector: #selector(dismissPopover), name: .dismissPopover, object: nil)
 	}
@@ -35,7 +39,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 	
 	private func initPopover() {
-		let contentController = ContentController(gitmojiController: gitmojiController)
+		let contentController = ContentController(appState: appState, gitmojiController: gitmojiController)
 		popover.contentViewController = contentController
 	}
 	

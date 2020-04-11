@@ -13,8 +13,10 @@ import SwiftUI
 class ContentController: NSViewController {
 	
 	let gitmojiController: GitmojiController
+	let appState: AppState
 	
-	init(gitmojiController: GitmojiController) {
+	init(appState: AppState, gitmojiController: GitmojiController) {
+		self.appState = appState
 		self.gitmojiController = gitmojiController
 		
 		super.init(nibName: nil, bundle: nil)
@@ -29,7 +31,10 @@ class ContentController: NSViewController {
 
         preferredContentSize = NSSize(width: 300, height: 460)
 
-		let hostingController = NSHostingController(rootView: ContentView(gitmojiController: self.gitmojiController))
+		let hostingController = NSHostingController(rootView:
+			ContentView(appState: self.appState,
+						gitmojiController: self.gitmojiController))
+			
         hostingController.view.autoresizingMask = [.width, .height]
         hostingController.view.frame = view.bounds
 		addChild(hostingController)

@@ -11,7 +11,7 @@ import SwiftUI
 struct SearchField: NSViewRepresentable {
 	@Binding var text: String
 	
-	init(_ text: Binding<String>) {
+	init(text: Binding<String>) {
 		_text = text
 	}
 	

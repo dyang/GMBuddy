@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E66BEC272442630900CD2111 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66BEC262442630900CD2111 /* String.swift */; };
 		E67148D6241E6735007C8AE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148D5241E6735007C8AE7 /* AppDelegate.swift */; };
 		E67148DA241E6736007C8AE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E67148D9241E6736007C8AE7 /* Assets.xcassets */; };
 		E67148DD241E6736007C8AE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E67148DB241E6736007C8AE7 /* Main.storyboard */; };
@@ -18,9 +19,11 @@
 		E6C838C624392474009C100A /* PasteboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C838C524392474009C100A /* PasteboardUtil.swift */; };
 		E6DE6A002441B84500F252B3 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE69FF2441B84500F252B3 /* Notification.swift */; };
 		E6DE6A032442255B00F252B3 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE6A022442255B00F252B3 /* SearchField.swift */; };
+		E6DE6A052442494C00F252B3 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE6A042442494C00F252B3 /* AppState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E66BEC262442630900CD2111 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		E67148D2241E6735007C8AE7 /* GMBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GMBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E67148D5241E6735007C8AE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E67148D9241E6736007C8AE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +38,7 @@
 		E6C838C524392474009C100A /* PasteboardUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardUtil.swift; sourceTree = "<group>"; };
 		E6DE69FF2441B84500F252B3 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		E6DE6A022442255B00F252B3 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
+		E6DE6A042442494C00F252B3 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,7 @@
 			children = (
 				E67148EA241E918C007C8AE7 /* NSPopover.swift */,
 				E6DE69FF2441B84500F252B3 /* Notification.swift */,
+				E66BEC262442630900CD2111 /* String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -103,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				E67148F0241EBD0B007C8AE7 /* Gitmoji.swift */,
+				E6DE6A042442494C00F252B3 /* AppState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,6 +201,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E6DE6A032442255B00F252B3 /* SearchField.swift in Sources */,
+				E66BEC272442630900CD2111 /* String.swift in Sources */,
+				E6DE6A052442494C00F252B3 /* AppState.swift in Sources */,
 				E67148E6241E8EBB007C8AE7 /* ContentController.swift in Sources */,
 				E67148EE241EBBF4007C8AE7 /* GitmojiController.swift in Sources */,
 				E67148E8241E8F32007C8AE7 /* ContentView.swift in Sources */,
