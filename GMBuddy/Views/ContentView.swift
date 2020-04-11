@@ -11,11 +11,16 @@ import SwiftUI
 struct ContentView: View {
 	
 	var gitmojiController: GitmojiController
+	@State var searchText: String = ""
 	
 	var body: some View {
-		List(self.gitmojiController.gitmojis) { gitmoji in
-			ItemView(gitmoji: gitmoji)
-				.frame(minHeight: 40)
+		VStack {
+			SearchField($searchText)
+				.padding([.top, .leading, .trailing], 8)
+			List(self.gitmojiController.gitmojis) { gitmoji in
+				ItemView(gitmoji: gitmoji)
+					.frame(minHeight: 40)
+			}
 		}
 		.padding(0)
 	}
