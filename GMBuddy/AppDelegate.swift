@@ -33,8 +33,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	
 	private func initStatusButton() {
 		guard let button = statusItem.button else { return }
-		button.image = NSImage(named: "g")
+		let image = NSImage(named: "g")
+		image?.isTemplate = true
+		button.image = image
+		
 		button.image?.size = NSSize(width: 20, height: 20)
+		button.target = self
 		button.action = #selector(togglePopover)
 	}
 	
