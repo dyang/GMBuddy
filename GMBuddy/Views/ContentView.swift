@@ -20,6 +20,7 @@ struct ContentView: View {
 				ItemView(gitmoji: gitmoji)
 					.frame(minHeight: 40)
 			}
+			StatusBar()
 		}
 		.padding(0)
 	}

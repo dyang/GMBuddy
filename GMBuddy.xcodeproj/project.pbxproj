@@ -16,6 +16,7 @@
 		E67148EB241E918C007C8AE7 /* NSPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148EA241E918C007C8AE7 /* NSPopover.swift */; };
 		E67148EE241EBBF4007C8AE7 /* GitmojiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148ED241EBBF4007C8AE7 /* GitmojiController.swift */; };
 		E67148F1241EBD0B007C8AE7 /* Gitmoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = E67148F0241EBD0B007C8AE7 /* Gitmoji.swift */; };
+		E69B71EC24434F54001644E8 /* StatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69B71EB24434F54001644E8 /* StatusBar.swift */; };
 		E6C838C624392474009C100A /* PasteboardUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C838C524392474009C100A /* PasteboardUtil.swift */; };
 		E6DE6A002441B84500F252B3 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE69FF2441B84500F252B3 /* Notification.swift */; };
 		E6DE6A032442255B00F252B3 /* SearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DE6A022442255B00F252B3 /* SearchField.swift */; };
@@ -35,6 +36,7 @@
 		E67148EA241E918C007C8AE7 /* NSPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPopover.swift; sourceTree = "<group>"; };
 		E67148ED241EBBF4007C8AE7 /* GitmojiController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitmojiController.swift; sourceTree = "<group>"; };
 		E67148F0241EBD0B007C8AE7 /* Gitmoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gitmoji.swift; sourceTree = "<group>"; };
+		E69B71EB24434F54001644E8 /* StatusBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBar.swift; sourceTree = "<group>"; };
 		E6C838C524392474009C100A /* PasteboardUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardUtil.swift; sourceTree = "<group>"; };
 		E6DE69FF2441B84500F252B3 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		E6DE6A022442255B00F252B3 /* SearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchField.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				E67148E7241E8F32007C8AE7 /* ContentView.swift */,
 				E6DE6A022442255B00F252B3 /* SearchField.swift */,
+				E69B71EB24434F54001644E8 /* StatusBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 				E6DE6A032442255B00F252B3 /* SearchField.swift in Sources */,
 				E66BEC272442630900CD2111 /* String.swift in Sources */,
 				E6DE6A052442494C00F252B3 /* AppState.swift in Sources */,
+				E69B71EC24434F54001644E8 /* StatusBar.swift in Sources */,
 				E67148E6241E8EBB007C8AE7 /* ContentController.swift in Sources */,
 				E67148EE241EBBF4007C8AE7 /* GitmojiController.swift in Sources */,
 				E67148E8241E8F32007C8AE7 /* ContentView.swift in Sources */,
