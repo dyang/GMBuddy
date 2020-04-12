@@ -45,6 +45,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	private func initPopover() {
 		let contentController = ContentController(appState: appState, gitmojiController: gitmojiController)
 		popover.contentViewController = contentController
+		popover.behavior = .transient
 	}
 	
 	@objc func togglePopover(_ sender: Any?) {
